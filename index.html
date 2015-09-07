@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="encriptar">
+<head>
+	<title>Encriptar</title>
+	<script src="js/angular.min.js"></script>
+
+
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+
+	<style type="text/css"></style>
+</head>
+<body>
+
+<div ng-controller="ctrlEncriptar" class="container">
+	
+
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label>Cadena a encriptar</label>
+				<input class="form-control" ng-model="txtEncriptar" maxlength="30">
+			</div>
+		</div>
+	</div>	
+
+	<div class="row">
+		 <div class="col-md-6">
+			<div class="form-group">
+				<button class="btn btn-primary" ng-click="encriptar()">Encriptar</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="row alert-success" ng-model="encriptado">
+		<div class="col-md-6">
+			{{encriptado}}
+		</div>
+	</div>		
+
+</div>
+
+
+<script src="js/encriptar.js"></script>
+
+</body>
+</html>
