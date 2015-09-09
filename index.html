@@ -3,24 +3,21 @@
 <head>
 	<title>Encriptar</title>
 	<script src="js/angular.min.js"></script>
-
-
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+	<script src="js/encriptar.js"></script>
 
 	<style type="text/css"></style>
 </head>
 <body>
 
+<form name="frmEncriptar">
 <div ng-controller="ctrlEncriptar" class="container">
-	
-
-
 	<div class="row">
 		<div class="col-md-6">
 			<div class="form-group">
 				<label>Cadena a encriptar</label>
-				<input class="form-control" ng-model="txtEncriptar" maxlength="30">
+				<input type="text" class="form-control" ng-model="txtEncriptar" maxlength="30" required>
 			</div>
 		</div>
 	</div>	
@@ -40,9 +37,9 @@
 	</div>		
 
 </div>
+</form>
 
 
-<script src="js/encriptar.js"></script>
 
 </body>
 </html>
