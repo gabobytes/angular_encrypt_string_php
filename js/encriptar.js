@@ -2,15 +2,18 @@
 
 		miApp.controller('ctrlEncriptar',['$scope', '$http', function($scope, $http){
 
+			$scope.formData = {};
 			
 
-			$scope.encriptar = function() {
+			$scope.encriptar = function(formData) {
+
+				
 				
 				var request = $http({
 					method: "post",
 					url: window.location.href + "./model.php",
 					data: {
-						txtEncriptar: $scope.txtEncriptar
+						txtEncriptar: $scope.formData.txtEncriptar
 					},
 					headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 

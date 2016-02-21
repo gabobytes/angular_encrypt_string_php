@@ -8,6 +8,12 @@
 	<script src="js/encriptar.js"></script>
 
 	<style type="text/css"></style>
+
+	<style type="text/css">
+		.error {
+ 		 border-color: red;
+		}
+	</style>
 </head>
 <body>
 
@@ -17,15 +23,16 @@
 		<div class="col-md-6">
 			<div class="form-group">
 				<label>Cadena a encriptar</label>
-				<input type="text" class="form-control" ng-model="txtEncriptar" maxlength="30" required>
+				<input type="text" name="txtEncriptar" class="form-control" ng-model="formData.txtEncriptar" maxlength="30" required>
+				<span ng-show="!frmEncriptar.$pristine && frmEncriptar.txtEncriptar.$error.required">Escribe al menos un caracter</span>
 			</div>
 		</div>
 	</div>	
 
 	<div class="row">
 		 <div class="col-md-6">
-			<div class="form-group">
-				<button class="btn btn-primary" ng-click="encriptar()">Encriptar</button>
+			<div class="form-group">				
+				<input type="submit" value="Encriptar" class="btn btn-primary" ng-click="encriptar(formData)" ng-disabled="!frmEncriptar.$valid">
 			</div>
 		</div>
 	</div>
